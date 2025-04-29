@@ -1,0 +1,1205 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <title>Pemerintah Provinsi Papua Selatan | Dinas Pangan, Pertanian, Kelautan & Perikanan </title>
+    <link rel="shortcut icon" href="assets/img/favicon1.png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/plugins/feather/feather.css">
+    <link rel="stylesheet" href="assets/plugins/icons/flags/flags.css">
+    <link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="assets/plugins/datatables/datatables.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- <script src="assets/js/jquery-3.6.0.min.js"></script> -->
+    <style type="text/css">
+        .preloader {
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+            position: fixed;
+            background-color: white;
+        }
+
+        .loading {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="preloader">
+        <div class=" loading">
+            <img src="assets/loading2.gif" alt="">
+        </div>
+
+    </div>
+
+    <div class="main-wrapper">
+
+        <div class="header">
+
+            <div class="header-left">
+                <a href="index.html" class="logo">
+                    <img src="assets/img/logo1.png" alt="Logo">
+                </a>
+                <a href="index.html" class="logo logo-small">
+                    <img src="assets/img/logo-small1.png" alt="Logo" width="30" height="30">
+                </a>
+            </div>
+            <div class="menu-toggle">
+                <a href="javascript:void(0);" id="toggle_btn">
+                    <i class="fas fa-bars"></i>
+                </a>
+            </div>
+
+            <!-- <div class="top-nav-search">
+                <form>
+                    <input type="text" class="form-control" placeholder="Search here">
+                    <button class="btn" type="submit"><i class="fas fa-search"></i></button>
+                </form>
+            </div> -->
+            <a class="mobile_btn" id="mobile_btn">
+                <i class="fas fa-bars"></i>
+            </a>
+
+            <ul class="nav user-menu">
+
+
+
+
+                <li class="nav-item zoom-screen me-2">
+                    <a href="#" class="nav-link header-nav-list win-maximize">
+                        <img src="assets/img/icons/header-icon-04.svg" alt="">
+                    </a>
+                </li>
+
+                <li class="nav-item dropdown has-arrow new-user-menus">
+                    <a href="#" class="dropdown-toggle nav-link" data-bs-toggle="dropdown">
+                        <span class="user-img">
+                            <img class="rounded-circle" src="assets/img/profiles/user.png" width="31"
+                                alt="Admin">
+                            <div class="user-text">
+                                <h6>Admin</h6>
+                                <p class="text-muted mb-0">Administrator</p>
+                            </div>
+                        </span>
+                    </a>
+                    <div class="dropdown-menu">
+                        <div class="user-header">
+                            <div class="avatar avatar-sm">
+                                <img src="assets/img/profiles/user.png" alt="User Image"
+                                    class="avatar-img rounded-circle">
+                            </div>
+                            <div class="user-text">
+                                <h6>Admin</h6>
+                                <p class="text-muted mb-0">Administrator</p>
+                            </div>
+                        </div>
+                        <a class="dropdown-item" href="javascript:void(0);">My Profile</a>
+                        <a class="dropdown-item tombol-logout" href="login.html">Logout</a>
+                    </div>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-inner slimscroll">
+                <div id="sidebar-menu" class="sidebar-menu">
+                    <ul>
+                        <li class="menu-title">
+                            <span>Main</span>
+                        </li>
+
+                        <!-- <li>
+                            <a href="Keuangan/Dashboard" class="active"><i class="feather-grid"></i> <span> Dashboard</span> </a>
+                        </li> -->
+                        <li class="submenu active ">
+                            <a href="#"><i class="feather-grid "></i> <span> Home</span> <span
+                                    class="menu-arrow"></span></a>
+                            <ul>
+                                <li><a href="index.html" class=" active">Dashboard</a></li>
+                            </ul>
+
+                        </li>
+
+                        <li class="menu-title">
+                            <span>Menu</span>
+                        </li>
+                        <li class="submenu  ">
+                            <a href="#"><i class="fas fa-file-invoice-dollar "></i> <span> Anggaran</span> <span
+                                    class="menu-arrow"></span></a>
+                            <ul>
+                                <li><a href="javascript:void(0);">Pendapatan</a></li>
+                                <li><a href="anggaranBelanja.html" class="">Belanja</a></li>
+                            </ul>
+
+                        </li>
+
+                        <li class="submenu ">
+                            <a href="#"><i class="fa fa-newspaper"></i> <span> Realisasi</span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul>
+                                <li><a href="javascript:void(0);">Pendapatan</a></li>
+                                <li><a href="realisasiBelanja.html" class="">Belanja</a></li>
+                            </ul>
+                        </li>
+                        <li class="submenu ">
+                            <a href="javascript:void(0);"><i class="fas fa-book"></i> <span>Laporan</span></a>
+                        </li>
+
+                        <li class="menu-title">
+                            <span>Pengaturan</span>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);"><i class="fas fa-cog"></i> <span>Settings</span></a>
+                        </li>
+                        <!-- <li class="submenu">
+                            <a href="#"><i class="fa fa-archive"></i> <span> Master Data</span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul>
+                                <li><a href="javascript:void(0);" class="">Akun</a></li>
+
+                            </ul>
+                        </li> -->
+
+
+                        <li class="">
+                            <a href="user.html"><i class="fas fa-users"></i> <span>User</span></a>
+                        </li>
+                        <li class="menu-title">
+                            <span> </span>
+                        </li> <br>
+                        <li>
+                            <a href="login.html" class="tombol-logout"><i class="fas fa-unlink "></i> <span><b>Logout</b></span></a>
+                        </li>
+
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+
+        <style>
+    td {
+
+        /* css-3 */
+        white-space: -o-pre-wrap;
+        word-wrap: break-word;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -pre-wrap;
+
+    }
+
+
+
+
+
+    /* 
+    table {
+        table-layout: fixed;
+        width: 100%
+    } */
+</style>
+<div class="page-wrapper">
+    <div class="content container-fluid">
+        <div class="row justify-content-center">
+            <div class="page-header">
+                <div class="row">
+                    <div class="col">
+                        <h3 class="page-title"></h3>
+                        <ul class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html">Menu</a></li>
+                            <li class="breadcrumb-item active">Anggaran</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="invoice-issues-box">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">
+                        <div class="invoice-issues-date">
+                            <p>ANGGARAN BELANJA DINAS PANGAN, PERTAINAN, KELAUTAN & PERIKANAN</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div> -->
+            <div class="col-xl-12 col-sm-12 col-12 d-flex">
+                <div class="card bg-comman w-100">
+                    <div class="card-body">
+                        <div class="db-widgets d-flex justify-content-between align-items-center">
+                            <div class="db-info">
+                                <h6>DINAS</h6>
+                                <h3>DINAS PANGAN, PERTAINAN, KELAUTAN & PERIKANAN</h3>
+                            </div>
+                            <!-- <div class="db-icon">
+                                        <img src="assets/img/icons/anggaran.svg" alt="Dashboard Icon">
+                                    </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-sm-6 col-12 d-flex">
+                <div class="card bg-comman w-100">
+                    <div class="card-body">
+                        <div class="db-widgets d-flex justify-content-between align-items-center">
+                            <div class="db-info">
+                                <h6>TOTAL ANGGARAN</h6>
+                                <h3>Rp24,066,613,801</h3>
+                            </div>
+                            <div class="db-icon">
+                                <img src="assets/img/icons/anggaran.svg" alt="Dashboard Icon">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-sm-6 col-12 d-flex">
+                <div class="card bg-comman w-100">
+                    <div class="card-body">
+                        <div class="db-widgets d-flex justify-content-between align-items-center">
+                            <div class="db-info">
+                                <h6>DANA ALOKASI UMUM</h6>
+                                <h3>Rp2,847,132,233</h3>
+                            </div>
+                            <div class="db-icon">
+                                <img src="assets/img/icons/realisasi.svg" alt="Dashboard Icon">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-sm-6 col-12 d-flex">
+                <div class="card bg-comman w-100">
+                    <div class="card-body">
+                        <div class="db-widgets d-flex justify-content-between align-items-center">
+                            <div class="db-info">
+                                <h6>OTSUS</h6>
+                                <h3>11,83%</h3>
+                            </div>
+                            <div class="db-icon">
+                                <img src="assets/img/icons/persentase.svg" alt="Dashboard Icon">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-sm-6 col-12 d-flex">
+                <div class="card bg-comman w-100">
+                    <div class="card-body">
+                        <div class="db-widgets d-flex justify-content-between align-items-center">
+                            <div class="db-info">
+                                <h6>DAK</h6>
+                                <h3>Rp21,219,481,568</h3>
+                            </div>
+                            <div class="db-icon">
+                                <img src="assets/img/icons/sisaAnggaran.svg" alt="Dashboard Icon">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="col-xl-12 col-sm-12 col-12 d-flex">
+                <div class="card bg-comman w-100">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="table-responsive">
+                                    <table class="invoice-table table table-center mb-0">
+                                        <thead>
+                                            <tr>
+                                                <th>Program/Kegiatan/Sub Kegiatan/Rincian Belanja</th>
+                                                <th>Indikator Kinerja Program (outcomes) /Kegiatan (output)</th>
+                                                <th>Volume</th>
+                                                <th>Satuan</th>
+                                                <th>Sumber Dana</th>
+                                                <th class="text-end">Anggaran</th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody>
+                                                                                            <tr>
+                                                    <td><b>2.09 URUSAN PEMERINTAHAN BIDANG PANGAN</b></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td class="text-end"><b>Rp15,070,079,453</b></td>
+                                                </tr>
+                                                                                                                                                    <tr>
+                                                        <td><b>2.09.01 PROGRAM PENUNJANG URUSAN PEMERINTAHAN DAERAH PROVINSI</b></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td class="text-end"><b>Rp13,422,379,453</b></td>
+                                                    </tr>
+
+
+                                                                                                                                                                <tr>
+                                                            <td><b>2.09.01.1.01 Perencanaan, Penganggaran, dan Evaluasi Kinerja Perangkat Daerah</b></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td class="text-end"><b>Rp12,090,500</b></td>
+                                                        </tr>
+
+
+                                                                                                                                                                            <tr>
+                                                                <td><a href="#">2.09.01.1.01.0001 Penyusunan Dokumen Perencanaan Perangkat Daerah</a></td>
+                                                                <td>Jumlah Dokumen Perencanaan Perangkat Daerah</td>
+                                                                <td>1</td>
+                                                                <td>Dokumen</td>
+                                                                <td>DAU</td>
+                                                                <td class="text-end">Rp5,000,000</td>
+                                                            </tr>
+                                                                                                                    <tr>
+                                                                <td><a href="#">2.09.01.1.01.0004 Koordinasi dan Penyusunan DPA-SKPD</a></td>
+                                                                <td>Jumlah Dokumen DPA- SKPD dan laporan hasil Koordinasi penyusunan Dokumen DPA- SKPD</td>
+                                                                <td>1</td>
+                                                                <td>Dokumen</td>
+                                                                <td>DAU</td>
+                                                                <td class="text-end">Rp2,150,000</td>
+                                                            </tr>
+                                                                                                                    <tr>
+                                                                <td><a href="#">2.09.01.1.01.0005 Koordinasi dan Penyusunan Perubahan DPA- SKPD</a></td>
+                                                                <td>Jumlah Laporan Kinerja dan Ikthisar realisasi Kinerja SKPD dan laporan hasil Koordinasi penyusunan laporan capaian kinerja dan Ikhtisar realisasi kinerja SKPD</td>
+                                                                <td>1</td>
+                                                                <td>Laporan</td>
+                                                                <td>DAU</td>
+                                                                <td class="text-end">Rp2,150,000</td>
+                                                            </tr>
+                                                                                                                    <tr>
+                                                                <td><a href="#">2.09.01.1.01.0006 Koordinasi dan Penyusunan Laporan Capaian Kinerja dan Ikhtisar Realisasi Kinerja SKPD</a></td>
+                                                                <td>Jumlah Dokumen Hasil Penyediaan Administrasi Pelaksanaan Tugas ASN</td>
+                                                                <td>1</td>
+                                                                <td>Laporan</td>
+                                                                <td>DAU</td>
+                                                                <td class="text-end">Rp2,790,500</td>
+                                                            </tr>
+                                                                                                                                                                    <tr>
+                                                            <td><b>2.09.01.1.02 Administrasi Keuangan Perangkat Daerah</b></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td class="text-end"><b>Rp12,550,032,001</b></td>
+                                                        </tr>
+
+
+                                                                                                                                                                            <tr>
+                                                                <td><a href="#">2.09.01.1.02.0001 Penyediaan Gaji dan Tunjangan ASN</a></td>
+                                                                <td>Jumlah Dokumen Hasil Penyediaan Administrasi Pelaksanaan Tugas ASN</td>
+                                                                <td>1</td>
+                                                                <td>Dokumen</td>
+                                                                <td>DAU</td>
+                                                                <td class="text-end">Rp12,438,205,501</td>
+                                                            </tr>
+                                                                                                                    <tr>
+                                                                <td><a href="#">2.09.01.1.02.0002 Penyediaan Administrasi Pelaksanaan Tugas ASN</a></td>
+                                                                <td>Persentase administrasi keuangan perangkat daerah yang dilaksanakan</td>
+                                                                <td>1</td>
+                                                                <td>Dokumen</td>
+                                                                <td>DAU</td>
+                                                                <td class="text-end">Rp111,826,500</td>
+                                                            </tr>
+                                                                                                                                                                    <tr>
+                                                            <td><b>2.09.01.1.06 Administrasi Umum Perangkat Daerah</b></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td class="text-end"><b>Rp227,193,352</b></td>
+                                                        </tr>
+
+
+                                                                                                                                                                            <tr>
+                                                                <td><a href="#">2.09.01.1.06.0001 Penyediaan Komponen Instalasi Listrik/Penerangan Bangunan Kantor</a></td>
+                                                                <td>Persentase Realisasi Administrasi Umum Perangkat Daerah </td>
+                                                                <td>1</td>
+                                                                <td>Paket</td>
+                                                                <td>DAU</td>
+                                                                <td class="text-end">Rp4,820,000</td>
+                                                            </tr>
+                                                                                                                    <tr>
+                                                                <td><a href="#">2.09.01.1.06.0002 Penyediaan Peralatan dan Perlengkapan Kantor</a></td>
+                                                                <td>Persentase Realisasi Administrasi Umum Perangkat Daerah </td>
+                                                                <td>1</td>
+                                                                <td>Paket</td>
+                                                                <td>DAU</td>
+                                                                <td class="text-end">Rp28,748,300</td>
+                                                            </tr>
+                                                                                                                    <tr>
+                                                                <td><a href="#">2.09.01.1.06.0004 Penyediaan Bahan Logistik Kantor</a></td>
+                                                                <td>Persentase Realisasi Administrasi Umum Perangkat Daerah </td>
+                                                                <td>1</td>
+                                                                <td>Paket</td>
+                                                                <td>DAU</td>
+                                                                <td class="text-end">Rp14,950,000</td>
+                                                            </tr>
+                                                                                                                    <tr>
+                                                                <td><a href="#">2.09.01.1.06.0005 Penyediaan Barang Cetakan dan Penggandaan</a></td>
+                                                                <td>Persentase Realisasi Administrasi Umum Perangkat Daerah </td>
+                                                                <td>1</td>
+                                                                <td>Paket</td>
+                                                                <td>DAU</td>
+                                                                <td class="text-end">Rp12,555,052</td>
+                                                            </tr>
+                                                                                                                    <tr>
+                                                                <td><a href="#">2.09.01.1.06.0007 Penyediaan Bahan/Material</a></td>
+                                                                <td>Persentase Realisasi Administrasi Umum Perangkat Daerah </td>
+                                                                <td>1</td>
+                                                                <td>Paket</td>
+                                                                <td>DAU</td>
+                                                                <td class="text-end">Rp25,000,000</td>
+                                                            </tr>
+                                                                                                                    <tr>
+                                                                <td><a href="#">2.09.01.1.06.0008 Fasilitasi Kunjungan Tamu</a></td>
+                                                                <td>Persentase Realisasi Administrasi Umum Perangkat Daerah </td>
+                                                                <td>1</td>
+                                                                <td>Paket</td>
+                                                                <td>DAU</td>
+                                                                <td class="text-end">Rp20,000,000</td>
+                                                            </tr>
+                                                                                                                    <tr>
+                                                                <td><a href="#">2.09.01.1.06.0009 Penyelenggaraan Rapat Koordinasi dan Konsultasi SKPD</a></td>
+                                                                <td>Persentase Realisasi Administrasi Umum Perangkat Daerah </td>
+                                                                <td>1</td>
+                                                                <td>Laporan</td>
+                                                                <td>DAU</td>
+                                                                <td class="text-end">Rp121,120,000</td>
+                                                            </tr>
+                                                                                                                                                                    <tr>
+                                                            <td><b>2.09.01.1.07 Pengadaan Barang Milik Daerah Penunjang Urusan Pemerintah Daerah</b></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td class="text-end"><b>Rp250,000,000</b></td>
+                                                        </tr>
+
+
+                                                                                                                                                                            <tr>
+                                                                <td><a href="#">2.09.01.1.07.0002 Pengadaan Kendaraan Dinas Operasional atau Lapangan</a></td>
+                                                                <td>Jumlah Unit Kendaraan Dinas Operasional atau Lapangan yang Disediakan</td>
+                                                                <td>1</td>
+                                                                <td>Unit</td>
+                                                                <td>DAU</td>
+                                                                <td class="text-end">Rp45,000,000</td>
+                                                            </tr>
+                                                                                                                    <tr>
+                                                                <td><a href="#">2.09.01.1.07.0010 Pengadaan Sarana dan Prasarana Gedung Kantor atau Bangunan Lainnya</a></td>
+                                                                <td>Jumlah Unit Sarana dan Prasarana Gedung Kantor atau Bangunan Lainnya yang Disediakan</td>
+                                                                <td>1</td>
+                                                                <td>Unit</td>
+                                                                <td>DAU</td>
+                                                                <td class="text-end">Rp205,000,000</td>
+                                                            </tr>
+                                                                                                                                                                    <tr>
+                                                            <td><b>2.09.01.1.08 Penyediaan Jasa Penunjang Urusan Pemerintahan Daerah</b></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td class="text-end"><b>Rp365,463,600</b></td>
+                                                        </tr>
+
+
+                                                                                                                                                                            <tr>
+                                                                <td><a href="#">2.09.01.1.08.0001 Penyediaan Jasa Surat Menyurat</a></td>
+                                                                <td>Jumlah Laporan Penyediaan Jasa Surat Menyurat</td>
+                                                                <td>1</td>
+                                                                <td>Laporan</td>
+                                                                <td>DAU</td>
+                                                                <td class="text-end">Rp4,999,600</td>
+                                                            </tr>
+                                                                                                                    <tr>
+                                                                <td><a href="#">2.09.01.1.08.0002 Penyediaan Jasa Komunikasi, Sumber Daya Air dan Listrik</a></td>
+                                                                <td>Jumlah Laporan Penyediaan Jasa Komunikasi, Sumber Daya Air dan Listrik yang Disediakan</td>
+                                                                <td>1</td>
+                                                                <td>Laporan</td>
+                                                                <td>DAU</td>
+                                                                <td class="text-end">Rp96,464,000</td>
+                                                            </tr>
+                                                                                                                    <tr>
+                                                                <td><a href="#">2.09.01.1.08.0004 Penyediaan Jasa Pelayanan Umum Kantor</a></td>
+                                                                <td>Jumlah Laporan penyediaan pelayanan umum kantor yang disediakan</td>
+                                                                <td>1</td>
+                                                                <td>laporan</td>
+                                                                <td>DAU</td>
+                                                                <td class="text-end">Rp264,000,000</td>
+                                                            </tr>
+                                                                                                                                                                    <tr>
+                                                            <td><b>2.09.01.1.09 Pemeliharaan Barang Milik Daerah Penunjang Urusan Pemerintahan Daerah</b></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td class="text-end"><b>Rp17,600,000</b></td>
+                                                        </tr>
+
+
+                                                                                                                                                                            <tr>
+                                                                <td><a href="#">2.09.01.1.09.0001 Penyediaan Jasa Pemeliharaan, Biaya Pemeliharaan dan Pajak Kendaraan Perorangan Dinas atau Kendaraan Dinas Jabatan</a></td>
+                                                                <td>Jumlah kendaraan perorangan Dinas atau kendaraan dinas jabatan yang dipelihara dan Dibayarkan Pajaknya</td>
+                                                                <td>2</td>
+                                                                <td>unit</td>
+                                                                <td>DAU</td>
+                                                                <td class="text-end">Rp17,600,000</td>
+                                                            </tr>
+                                                                                                                                                                                                                <tr>
+                                                        <td><b>2.09.03 PROGRAM PENINGKATAN DIVERSIFIKASI DAN KETAHANAN PANGAN MASYARAKAT</b></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td class="text-end"><b>Rp1,144,458,000</b></td>
+                                                    </tr>
+
+
+                                                                                                                                                                <tr>
+                                                            <td><b>2.09.03.1.01 Penyediaan dan Penyaluran Pangan Pokok atau Pangan Lainnya sesuai dengan Kebutuhan Daerah Provinsi dalam rangka Stabilisasi Pasokan dan Harga Pangan</b></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td class="text-end"><b>Rp144,458,000</b></td>
+                                                        </tr>
+
+
+                                                                                                                                                                            <tr>
+                                                                <td><a href="#">2.09.03.1.01.0003 Koordinasi, Sinkronisasi dan Pelaksanaan Distribusi Pangan Pokok dan Pangan Lainnya</a></td>
+                                                                <td>Jumlah Koordinasi Penyelenggaraan cadangan pangan Pemerintah Provinsi</td>
+                                                                <td>2</td>
+                                                                <td>laporan</td>
+                                                                <td>DAU</td>
+                                                                <td class="text-end">Rp144,458,000</td>
+                                                            </tr>
+                                                                                                                                                                    <tr>
+                                                            <td><b>2.09.03.1.02 Pengelolaan dan Keseimbangan Cadangan Pangan Provinsi</b></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td class="text-end"><b>Rp500,000,000</b></td>
+                                                        </tr>
+
+
+                                                                                                                                                                            <tr>
+                                                                <td><a href="#">2.09.03.1.02.0006 Penyaluran Cadangan Pangan Pemerintah Provinsi</a></td>
+                                                                <td>Jumlah Penyaluran Pemerintah Provinsi</td>
+                                                                <td>16830</td>
+                                                                <td>Ton</td>
+                                                                <td>0</td>
+                                                                <td class="text-end">Rp96,242,922</td>
+                                                            </tr>
+                                                                                                                    <tr>
+                                                                <td><a href="#">2.09.03.1.02.0007 Pengadaaan Cadangan Pangan Pemerintah Provinsi</a></td>
+                                                                <td>Jumlah Pengadaan pemerintah Provinsi</td>
+                                                                <td>16830</td>
+                                                                <td>Ton</td>
+                                                                <td>0</td>
+                                                                <td class="text-end">Rp403,757,078</td>
+                                                            </tr>
+                                                                                                                                                                    <tr>
+                                                            <td><b>2.09.03.1.04 Promosi Pencapaian Target Konsumsi Pangan Perkapita/Tahun sesuai dengan Angka Kecukupan Gizi Melalui Media Provinsi</b></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td class="text-end"><b>Rp500,000,000</b></td>
+                                                        </tr>
+
+
+                                                                                                                                                                            <tr>
+                                                                <td><a href="#">2.09.03.1.04.0002 Koordinasi dan Sinkronisasi Pelaksanaan Advokasi, Edukasi, dan Sosialisasi Konsumsi Pangan Beragam, Bergizi, Seimbang dan Aman (B2SA)</a></td>
+                                                                <td>Jumlah Koordinasi dan Sinkronisasi, Edukasi Edukasi, dan Sosialisasi Konsumsi Pangan Beragam, Bergizi, Seimbang dan Aman (B2SA)</td>
+                                                                <td>1</td>
+                                                                <td>Laporan</td>
+                                                                <td>OTSUS</td>
+                                                                <td class="text-end">Rp500,000,000</td>
+                                                            </tr>
+                                                                                                                                                                                                                <tr>
+                                                        <td><b>2.09.04 PROGRAM PENANGANAN KERAWANAN PANGAN</b></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td class="text-end"><b>Rp500,000,000</b></td>
+                                                    </tr>
+
+
+                                                                                                                                                                <tr>
+                                                            <td><b>2.09.04.1.01 Penyusunan Peta Kerentanan dan Ketahanan Pangan kewenangan Provinsi</b></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td class="text-end"><b>Rp200,000,000</b></td>
+                                                        </tr>
+
+
+                                                                                                                                                                            <tr>
+                                                                <td><a href="#">2.09.04.1.01.0001 Penyusunan, Pemutakhiran dan Analisis Peta Ketahanan dan Kerentanan Pangan Provinsi dan Kabupaten/Kota</a></td>
+                                                                <td>Peta dan Analisis Ketahanan dan Kerentanan Pangan Provinsi yang Dimuktakhiran</td>
+                                                                <td>4</td>
+                                                                <td>Dokumen</td>
+                                                                <td>OTSUS</td>
+                                                                <td class="text-end">Rp200,000,000</td>
+                                                            </tr>
+                                                                                                                                                                    <tr>
+                                                            <td><b>2.09.04.1.02 Penanganan Kerawanan Pangan Kewenangan Provinsi</b></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td class="text-end"><b>Rp300,000,000</b></td>
+                                                        </tr>
+
+
+                                                                                                                                                                            <tr>
+                                                                <td><a href="#">2.09.04.1.02.0003 Pelaksanaan Intervensi Kewaspadaan Pangan dan Gizi</a></td>
+                                                                <td>Jumlah Intervensi Kewaspadaan pangan dan gizi</td>
+                                                                <td>4</td>
+                                                                <td>Dokumen</td>
+                                                                <td>OTSUS</td>
+                                                                <td class="text-end">Rp300,000,000</td>
+                                                            </tr>
+                                                                                                                                                                                                                <tr>
+                                                        <td><b>2.09.05 PROGRAM PENGAWASAN KEAMANAN PANGAN</b></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td class="text-end"><b>Rp3,242,000</b></td>
+                                                    </tr>
+
+
+                                                                                                                                                                <tr>
+                                                            <td><b>2.09.05.1.01 Pelaksanaan Pengawasan Keamanan Pangan Segar Distribusi Lintas Daerah Kabupaten/Kota</b></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td class="text-end"><b>Rp3,242,000</b></td>
+                                                        </tr>
+
+
+                                                                                                                                                                            <tr>
+                                                                <td><a href="#">2.09.05.1.01.0011 Koordinasi dan sinkronisasi keamanan dan mutu pangan segar asal tumbuhan</a></td>
+                                                                <td>Jumlah Koordinasi dan Sinkronasasi keamanan dan mutu pangan segar asal tumbuhan</td>
+                                                                <td>1</td>
+                                                                <td>Dokumen</td>
+                                                                <td>DAU</td>
+                                                                <td class="text-end">Rp3,242,000</td>
+                                                            </tr>
+                                                                                                                                                            
+
+                                                                                            <tr>
+                                                    <td><b>3.25 URUSAN PEMERINTAHAN BIDANG KELAUTAN  DAN PERIKANAN</b></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td class="text-end"><b>Rp2,901,832,348</b></td>
+                                                </tr>
+                                                                                                                                                    <tr>
+                                                        <td><b>3.25.02 PROGRAM PENGELOLAAN KELAUTAN, PESISIR DAN PULAU-PULAU KECIL</b></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td class="text-end"><b>Rp399,994,648</b></td>
+                                                    </tr>
+
+
+                                                                                                                                                                <tr>
+                                                            <td><b>3.25.02.1.01 Pengelolaan Ruang Laut Sampai Dengan 12 Mil di Luar Minyak dan Gas Bumi</b></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td class="text-end"><b>Rp99,995,000</b></td>
+                                                        </tr>
+
+
+                                                                                                                                                                            <tr>
+                                                                <td><a href="#">3.25.02.1.01.0002 Pengelolaan Kawasan Konservasi di Wilayah Pesisir dan Pulau-Pulau Kecil Berdasarkan Penetapan dari Pemerintah Pusat</a></td>
+                                                                <td>Luasan Kawasan Konservasi di wilayah Pesisir dan Pulau - pulau kecil yang terkelolah</td>
+                                                                <td>120000</td>
+                                                                <td>Ha</td>
+                                                                <td>DAU</td>
+                                                                <td class="text-end">Rp99,995,000</td>
+                                                            </tr>
+                                                                                                                                                                    <tr>
+                                                            <td><b>3.25.02.1.03 Pemberdayaan Masyarakat Pesisir dan Pulau-Pulau Kecil</b></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td class="text-end"><b>Rp299,999,648</b></td>
+                                                        </tr>
+
+
+                                                                                                                                                                            <tr>
+                                                                <td><a href="#">3.25.02.1.03.0001 Pengembangan Kapasitas Masyarakat Pesisir dan Pulau-Pulau Kecil</a></td>
+                                                                <td>Jumlah masyarakat Pesisir dan pulau - pulau kecil yang meningkat kapasitasnya </td>
+                                                                <td>60</td>
+                                                                <td>Org</td>
+                                                                <td>OTSUS</td>
+                                                                <td class="text-end">Rp299,999,648</td>
+                                                            </tr>
+                                                                                                                                                                                                                <tr>
+                                                        <td><b>3.25.03 PROGRAM PENGELOLAAN PERIKANAN TANGKAP</b></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td class="text-end"><b>Rp1,347,183,700</b></td>
+                                                    </tr>
+
+
+                                                                                                                                                                <tr>
+                                                            <td><b>3.25.03.1.01 Pengelolaan Penangkapan Ikan di Wilayah Laut Sampai Dengan 12 Mil</b></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td class="text-end"><b>Rp870,062,700</b></td>
+                                                        </tr>
+
+
+                                                                                                                                                                            <tr>
+                                                                <td><a href="#">3.25.03.1.01.0002 Penyediaan Prasarana Usaha Perikanan Tangkap</a></td>
+                                                                <td>Jumlah Prasarana Usaha Perikanan Tangkap yang Tersedia di Wilayah laut sampai 12 Mil</td>
+                                                                <td>16</td>
+                                                                <td>unit</td>
+                                                                <td>OTSUS</td>
+                                                                <td class="text-end">Rp870,062,700</td>
+                                                            </tr>
+                                                                                                                                                                    <tr>
+                                                            <td><b>3.25.03.3.11 Penerbitan rekomendasi perizinan berusaha pada subsektor penangkapan ikan dan subsektor pengangkutan ikan untuk kapal penangkap ikan dan kapal pengangkut ikan sesuai dengan kewenangan yang diatur dalam peraturan perundang-undangan</b></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td class="text-end"><b>Rp30,000,000</b></td>
+                                                        </tr>
+
+
+                                                                                                                                                                            <tr>
+                                                                <td><a href="#">3.25.03.3.11.0002 Penerbitan Rekomendasi perizinan berusaha pada subsektor penangkapan ikan dan subsektor pengangkutan ikan untuk kapal penangkap ikan dan kapal pengangkut ikan sesuai dengan kewenangan yang diatur dalam peraturan perundang-undangan</a></td>
+                                                                <td>Jumlah Prasarana Usaha Perikanan Tangkap yang Tersedia di Wilayah laut sampai 12 Mil</td>
+                                                                <td>16</td>
+                                                                <td>unit</td>
+                                                                <td>OTSUS</td>
+                                                                <td class="text-end">Rp30,000,000</td>
+                                                            </tr>
+                                                                                                                                                                    <tr>
+                                                            <td><b>3.25.03.3.16 Pemberdayaan usaha kecil pembudidayaan ikan di laut sampai dengan 12 (dua belas) mil laut dan di perairan daratan</b></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td class="text-end"><b>Rp447,121,000</b></td>
+                                                        </tr>
+
+
+                                                                                                                                                                            <tr>
+                                                                <td><a href="#">3.25.03.3.16.0001 Pemberdayaan usaha kecil pembudidayaan ikan di laut sampai dengan 12 (dua belas) mil dan di perairan daratan.</a></td>
+                                                                <td>Jumlah usaha kecil pembudidayaan ikan dilaut sampai dengan 12 ( dua belas) Mil dan di perairan daratan yang diberdayakan</td>
+                                                                <td>7</td>
+                                                                <td>unit usaha</td>
+                                                                <td>OTSUS</td>
+                                                                <td class="text-end">Rp447,121,000</td>
+                                                            </tr>
+                                                                                                                                                                                                                <tr>
+                                                        <td><b>3.25.04 PROGRAM PENGELOLAAN PERIKANAN BUDIDAYA</b></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td class="text-end"><b>Rp34,654,000</b></td>
+                                                    </tr>
+
+
+                                                                                                                                                                <tr>
+                                                            <td><b>3.25.04.1.01 Penerbitan Izin Usaha Perikanan di Bidang Pembudidayaan Ikan yang Usahanya Lintas Daerah Kabupaten/Kota dalam 1 (Satu) Daerah Provinsi</b></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td class="text-end"><b>Rp34,654,000</b></td>
+                                                        </tr>
+
+
+                                                                                                                                                                            <tr>
+                                                                <td><a href="#">3.25.04.1.01.0003 Penyediaan Data dan Informasi Usaha Perikanan di Bidang Pembudidayaan Ikan</a></td>
+                                                                <td>Jumlah data informasi Perikanan di Bidang Pembudidayaan ikan di laut berdasarkan Skala Usaha dan tingkat resiko</td>
+                                                                <td>3</td>
+                                                                <td>Dokumen</td>
+                                                                <td>OTSUS</td>
+                                                                <td class="text-end">Rp34,654,000</td>
+                                                            </tr>
+                                                                                                                                                                                                                <tr>
+                                                        <td><b>3.25.06 PROGRAM PENGOLAHAN DAN PEMASARAN HASIL PERIKANAN</b></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td class="text-end"><b>Rp1,120,000,000</b></td>
+                                                    </tr>
+
+
+                                                                                                                                                                <tr>
+                                                            <td><b>3.25.06.1.02 Pembinaan Mutu dan Keamanan Hasil Perikanan bagi Usaha Pengolahan dan Pemasaran Skala Menengah dan Besar</b></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td class="text-end"><b>Rp1,120,000,000</b></td>
+                                                        </tr>
+
+
+                                                                                                                                                                            <tr>
+                                                                <td><a href="#">3.25.06.1.02.0003 Pelaksanaan Pembinaan, Fasilitasi, Pemantauan, dan Evaluasi terhadap Mutu dan Keamanan Hasil Perikanan, dan Daya Saing serta Pemberdayaan Usaha dalam rangka Menghasilkan Produk yang Aman dan Bermutu untuk dikonsumsi atau digunakan, dan Berdaya Saing</a></td>
+                                                                <td> Jumlah Pembinaan, Fasilitasi, Pemantauan dan Evaluasi terhadap Mutu dan Keamanan Hasil perikanan, dan daya saing serta Pemberdayaan Usaha dalam rangka menghasilkan Produk yang aman dan bermutu untuk di konsumsi atau digunaka</td>
+                                                                <td>3</td>
+                                                                <td>Kegiatan</td>
+                                                                <td>OTSUS</td>
+                                                                <td class="text-end">Rp1,120,000,000</td>
+                                                            </tr>
+                                                                                                                                                            
+
+                                                                                            <tr>
+                                                    <td><b>3.27 URUSAN PEMERINTAHAN BIDANG PERTANIAN</b></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td class="text-end"><b>Rp6,094,701,999</b></td>
+                                                </tr>
+                                                                                                                                                    <tr>
+                                                        <td><b>3.27.02 PROGRAM PENYEDIAAN DAN PENGEMBANGAN SARANA PERTANIAN</b></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td class="text-end"><b>Rp1,588,309,420</b></td>
+                                                    </tr>
+
+
+                                                                                                                                                                <tr>
+                                                            <td><b>3.27.02.1.02 Pengawasan Mutu, Penyediaan dan Peredaran Benih Tanaman</b></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td class="text-end"><b>Rp4,600,000</b></td>
+                                                        </tr>
+
+
+                                                                                                                                                                            <tr>
+                                                                <td><a href="#">3.27.02.1.02.0001 Pengelolaan Penerbitan Sertifikat Benih</a></td>
+                                                                <td>Jumlah Sertifikat Benih</td>
+                                                                <td>250</td>
+                                                                <td>Sertifikat</td>
+                                                                <td>DAU</td>
+                                                                <td class="text-end">Rp4,600,000</td>
+                                                            </tr>
+                                                                                                                                                                    <tr>
+                                                            <td><b>3.27.02.1.04 Peningkatan Ketersediaan dan Mutu Benih/Bibit Ternak dan Tanaman Pakan Ternak, Bahan Pakan, serta Pakan Kewenangan Provinsi</b></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td class="text-end"><b>Rp1,583,709,420</b></td>
+                                                        </tr>
+
+
+                                                                                                                                                                            <tr>
+                                                                <td><a href="#">3.27.02.1.04.0001 Pemberian Bimbingan Peningkatan Produksi Benih/Bibit Ternak dan Tanaman Pakan Ternak, Bahan Pakan, serta Pakan Kewenangan Provinsi</a></td>
+                                                                <td>Jumlah Bimbingan Peningkatan Produksi Benih/Bibit Ternak dan Tanaman Pakan Ternak, Bahan Pakan, Serta Pakan Kewenangan Provinsi</td>
+                                                                <td>2</td>
+                                                                <td>Dokumen</td>
+                                                                <td>OTSUS</td>
+                                                                <td class="text-end">Rp161,670,000</td>
+                                                            </tr>
+                                                                                                                    <tr>
+                                                                <td><a href="#">3.27.02.1.04.0004 Pengembangan dan Pelaksanaan Sistem Manajemen Produksi Benih/Bibit Ternak dan Tanaman Pakan Ternak, Bahan Pakan, serta Pakan Kewenangan Provinsi</a></td>
+                                                                <td>Jumlah Sistem Manajemen Produksi Benih/Bibit Ternak dan Tanaman Pakan Ternak, Bahan Pakan, serta Pakan Kewenangan</td>
+                                                                <td>3</td>
+                                                                <td>Laporan</td>
+                                                                <td>OTSUS</td>
+                                                                <td class="text-end">Rp1,422,039,420</td>
+                                                            </tr>
+                                                                                                                                                                                                                <tr>
+                                                        <td><b>3.27.03 PROGRAM PENYEDIAAN DAN PENGEMBANGAN PRASARANA PERTANIAN</b></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td class="text-end"><b>Rp1,925,702,000</b></td>
+                                                    </tr>
+
+
+                                                                                                                                                                <tr>
+                                                            <td><b>3.27.03.1.01 Penataan Prasarana Pertanian</b></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td class="text-end"><b>Rp1,925,702,000</b></td>
+                                                        </tr>
+
+
+                                                                                                                                                                            <tr>
+                                                                <td><a href="#">3.27.03.1.01.0013 Pengendalian dan Pemanfaatan Kawasan Pertanian</a></td>
+                                                                <td> Luas kawasan pertanian  yang termanfaatkan</td>
+                                                                <td>1000</td>
+                                                                <td>Ha</td>
+                                                                <td>OTSUS</td>
+                                                                <td class="text-end">Rp1,925,702,000</td>
+                                                            </tr>
+                                                                                                                                                                                                                <tr>
+                                                        <td><b>3.27.04 PROGRAM PENGENDALIAN KESEHATAN HEWAN DAN KESEHATAN MASYARAKAT VETERINER</b></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td class="text-end"><b>Rp566,290,579</b></td>
+                                                    </tr>
+
+
+                                                                                                                                                                <tr>
+                                                            <td><b>3.27.04.1.01 Penjaminan Kesehatan Hewan, Penutupan dan Pembukaan Daerah Wabah Penyakit Hewan Menular Lintas Daerah Kabupaten/Kota dalam 1 (satu) Daerah Provinsi</b></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td class="text-end"><b>Rp566,290,579</b></td>
+                                                        </tr>
+
+
+                                                                                                                                                                            <tr>
+                                                                <td><a href="#">3.27.04.1.01.0007 Pemberantasan Penyakit Hewan Menular dan Zoonosis dalam 1 (satu) Daerah Provinsi</a></td>
+                                                                <td>Jumlah wilayah atau kawasan yang mengalami penurunan kasus penyakit hewan  menular dan zoonosis dalam 1 (satu) Daerah Provinsi</td>
+                                                                <td>4</td>
+                                                                <td>laporan</td>
+                                                                <td>OTSUS</td>
+                                                                <td class="text-end">Rp325,641,799</td>
+                                                            </tr>
+                                                                                                                    <tr>
+                                                                <td><a href="#">3.27.04.1.01.0009 Pengelolaan Partisipasi Masyarakat dalam Pengendalian Zoonosis</a></td>
+                                                                <td>Jumlah Kader Zoonosis</td>
+                                                                <td>30</td>
+                                                                <td>Orang</td>
+                                                                <td>OTSUS</td>
+                                                                <td class="text-end">Rp240,648,780</td>
+                                                            </tr>
+                                                                                                                                                                                                                <tr>
+                                                        <td><b>3.27.07 PROGRAM PENYULUHAN PERTANIAN</b></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td class="text-end"><b>Rp2,014,400,000</b></td>
+                                                    </tr>
+
+
+                                                                                                                                                                <tr>
+                                                            <td><b>3.27.07.1.02 Pengembangan Penerapan Penyuluhan Pertanian</b></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td class="text-end"><b>Rp2,000,000,000</b></td>
+                                                        </tr>
+
+
+                                                                                                                                                                            <tr>
+                                                                <td><a href="#">3.27.07.1.02.0002 Pelaksanaan Penyuluhan dan Pemberdayaan Petani</a></td>
+                                                                <td>Jumlah kelompok Petani yang Mendapat Penyuluhan dan Pemberdayaan</td>
+                                                                <td>30</td>
+                                                                <td>Kelompok</td>
+                                                                <td>OTSUS</td>
+                                                                <td class="text-end">Rp2,000,000,000</td>
+                                                            </tr>
+                                                                                                                                                                    <tr>
+                                                            <td><b>3.27.07.1.03 Pengembangan Kapasitas Kelembagaan Ekonomi Petani Berbasis Kawasan</b></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td class="text-end"><b>Rp14,400,000</b></td>
+                                                        </tr>
+
+
+                                                                                                                                                                            <tr>
+                                                                <td><a href="#">3.27.07.1.03.0005 Pendampingan dan pengawalan korporasi petani</a></td>
+                                                                <td>Jumlah Korporasi petani yang didampingi</td>
+                                                                <td>1</td>
+                                                                <td>Unit</td>
+                                                                <td>DAU</td>
+                                                                <td class="text-end">Rp14,400,000</td>
+                                                            </tr>
+                                                                                                                                                            
+
+                                            
+                                        </tbody>
+
+
+
+
+
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+</div>
+
+
+        <div class="footer">
+            <footer>
+                <p>Copyright © 2025 Dinas Pangan, Pertanian, Kelautan & Perikanan</p>
+            </footer>
+        </div>
+
+    </div>
+
+
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/feather.min.js"></script>
+    <script src="assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="assets/plugins/apexchart/apexcharts.min.js"></script>
+    <script src="assets/plugins/apexchart/chart-data.js"></script>
+    <script src="assets/plugins/sweetalert/sweetalert2.all.min.js"></script>
+    <script src="assets/plugins/sweetalert/sweetalerts.min.js"></script>
+    <script src="assets/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="assets/plugins/datatables/datatables.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.preloader').delay('150').fadeOut();
+
+        });
+
+
+        // $(document).ready(function() {
+        //     table = $('#realisasi').DataTable({
+        //         responsive: true,
+        //         "order": [2],
+
+
+        //         "columnDefs": [{
+        //             "targets": [0],
+        //             "orderable": false,
+        //             "width": 5
+        //         }],
+        //     })
+
+        // });
+
+        // function fetch() {
+
+        //     table = $('#realisasi').DataTable({
+        //         responsive: true,
+        //         "order": [2],
+
+
+        //         "columnDefs": [{
+        //             "targets": [0],
+        //             "orderable": false,
+        //             "width": 5
+        //         }],
+
+        //     });
+
+
+        // };
+        // fetch();
+        $('.tombol-logout').on('click', function(e) {
+
+            e.preventDefault();
+            const href = $(this).attr('href');
+
+            Swal.fire({
+                title: 'Anda Akan Logout?',
+                text: "",
+                type: 'warning',
+                icon: "warning",
+                dangermode: true,
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Ya',
+                cancelButtonText: 'Batal'
+            }).then((result) => {
+                if (result.value) {
+                    document.location.href = href;
+                }
+            })
+
+
+        });
+
+
+        $("#confirm-text").on("click", function() {
+            Swal.fire({
+                title: "Are you sure?",
+                text: "You won't be able to revert this!",
+                type: "warning",
+                showCancelButton: !0,
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "#d33",
+                confirmButtonText: "Yes, delete it!",
+                confirmButtonClass: "btn btn-primary",
+                cancelButtonClass: "btn btn-danger ml-1",
+                buttonsStyling: !1
+            }).then(function(t) {
+                t.value && Swal.fire({
+                    type: "success",
+                    title: "Deleted!",
+                    text: "Your file has been deleted.",
+                    confirmButtonClass: "btn btn-success"
+                })
+            })
+        })
+    </script>
+</body>
+
+</html>
