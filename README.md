@@ -1,1 +1,0 @@
-# dppkp.papuaselatan.github.io
